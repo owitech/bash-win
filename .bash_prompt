@@ -1,9 +1,11 @@
-# Mensaje personalizado
-function hello_prompt() {
-  echo -e "Hola Julio > $(date)\n"
+#!/usr/bin/bash
 
-  # Formato del prompt
-  PS1="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h:\[\e[33;1m\]\w\[\e[m\]\$ "
+# Mensaje personalizado
+USER=$(whoami)
+DATE=$(date +"%Y-%m-%d %H:%M:%S")
+
+function hello_prompt() {
+  echo -e "Hola ${USER^} > $DATE\n"
 }
 
 hello_prompt
