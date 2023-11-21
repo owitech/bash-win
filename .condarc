@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+  - defaults
+
+envs_dirs:
+  - E:\conda-envs
+
+auto_activate_base: false
+aggressive_update_packages: []
+auto_update_conda: False
+

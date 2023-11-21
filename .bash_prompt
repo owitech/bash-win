@@ -1,0 +1,10 @@
+# Mensaje personalizado
+function hello_prompt() {
+  echo -e "Hola Julio > $(date)\n"
+
+  # Formato del prompt
+  PS1="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h:\[\e[33;1m\]\w\[\e[m\]\$ "
+}
+
+hello_prompt
+
