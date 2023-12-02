@@ -1,0 +1,11 @@
+*
+
+!.bashrc
+!.bash_profile
+!.bash_prompt
+
+!.condarc
+!.wslconfig
+!.gitignore
+
+!README.md

@@ -12,22 +12,21 @@ function current_dir() {
 
 # Actualizar el prompt solo cuando cambia el directorio
 update_prompt() {
-    PS1="${COLOR_CYAN}\u${COLOR_RESET}@${COLOR_GREEN}\h${COLOR_RESET}:${COLOR_YELLOW}\$(current_dir)${COLOR_RESET} > "
+    PS1="${COLOR_YELLOW}\$(current_dir)${COLOR_RESET} > "
 }
 
 # Asignar la función al evento PROMPT_COMMAND
 PROMPT_COMMAND=update_prompt
 
+# ejecutar .bashrc y .bash_prompt
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 if [ -f ~/.bash_prompt ]; then . ~/.bash_prompt; fi
 
+# Auto-completado de aws-cli
 export PATH=/c/Program\ Files/Amazon/AWSCLIV2/aws_completer:$PATH
+
+# Configurar conda envs en Dev Drive (E:). Dev Home
 export CONDA_PREFIX=/e/conda-envs
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if [ -f '/c/Conda/Scripts/conda.exe' ]; then
-    eval "$('/c/Conda/Scripts/conda.exe' 'shell.bash' 'hook')"
-fi
-# <<< conda initialize <<<
-
+# gh completion
+eval "$(gh completion -s bash)"

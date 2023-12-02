@@ -2,10 +2,16 @@
 
 # Mensaje personalizado
 USER=$(whoami)
-DATE=$(date +"%Y-%m-%d %H:%M:%S")
+HOST=$(hostname)
+DATE=$(date +"%d/%m %H:%M")
+
+function get_ip() {
+  IP=$(ipconfig | grep -oE "192\.168\.0\.(3[4-9]|4[0-5]|[1-5][0-9]|10)")
+  echo "$IP"
+}
 
 function hello_prompt() {
-  echo -e "Hola ${USER^} > $DATE\n"
+  echo -e "${USER^} [${HOST}] [$DATE] [$(get_ip)]\n"
 }
 
 hello_prompt
