@@ -1,0 +1,1 @@
+alias sam='sam.cmd'

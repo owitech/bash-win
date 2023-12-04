@@ -1,3 +1,9 @@
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+
+# Get message
+if [ -f ~/.bash_prompt ]; then . ~/.bash_prompt; fi
+
 # Colores para el prompt
 COLOR_BLUE="\[\e[34m\]"
 COLOR_GREEN="\[\e[32m\]"
@@ -17,10 +23,6 @@ update_prompt() {
 
 # Asignar la función al evento PROMPT_COMMAND
 PROMPT_COMMAND=update_prompt
-
-# ejecutar .bashrc y .bash_prompt
-if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
-if [ -f ~/.bash_prompt ]; then . ~/.bash_prompt; fi
 
 # Auto-completado de aws-cli
 export PATH=/c/Program\ Files/Amazon/AWSCLIV2/aws_completer:$PATH
