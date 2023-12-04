@@ -2,7 +2,9 @@
 
 !.bashrc
 !.bash_profile
+!.bash_aliases
 !.bash_prompt
+!.bash_logout
 
 !.condarc
 !.wslconfig
