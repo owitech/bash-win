@@ -7,4 +7,4 @@ envs_dirs:
 
 auto_activate_base: false
 aggressive_update_packages: []
-auto_update_conda: False
+auto_update_conda: false

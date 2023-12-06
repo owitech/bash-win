@@ -5,7 +5,7 @@ if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 complete -C '/c/Program\ Files/Amazon/AWSCLIV2/aws_completer' aws
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+#source <(ng completion script)
 
 ###-begin-cdk-completions-###
 _cdk_yargs_completions()
@@ -29,3 +29,6 @@ _cdk_yargs_completions()
 }
 complete -o default -F _cdk_yargs_completions cdk
 ###-end-cdk-completions-###
+
+source /c/conda/etc/profile.d/conda.sh
+
