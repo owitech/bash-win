@@ -11,7 +11,7 @@ function get_ip() {
 }
 
 function hello_prompt() {
-  echo -e "${USER^} [${HOST}] [$DATE] [$(get_ip)]\n"
+  echo -e "${USER^} [${HOST}] [$DATE] [$(get_ip)]"
 }
 
 hello_prompt
